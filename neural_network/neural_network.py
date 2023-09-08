@@ -3,13 +3,18 @@ Neural Nerwork
 ==============
 
 Neural Network Algorithm.
-- Features:
-    - Optimization Algorithm: `Gradient Descent`
+Features:
+---------
     - Activation Functions Options: 
         - `linear`: linear regression funtion
         - `sigmoid`: Logistic Regression function
         - `ReLU`: Rectified linear unit
+    - Optimization Algorithm: `Gradient Descent`
+    - Cost Function: `Log Loss` if output layer is `sigmoid`, `Mean Squared Error` otherwise.
         
+Use cases:
+------------
+This Neural Network module can be used to train models for `Regression` and `Binary Classification`.    
         
 How to use:
 -----------
@@ -110,7 +115,7 @@ class NN():
         self.hidden_layers = hidden_layers
     ##
 
-    def train(self, features: np.array, labels: np.array, alpha: float= .001, n_iterations:int=10000, e:float=1e-4, print_cost=True):
+    def train(self, features: np.array, labels: np.array, alpha: float= .001, n_iterations:int=10000, e:float=1e-4, print_cost=True, print_each: int=1000):
         """
         Training:
         --------
@@ -160,7 +165,7 @@ class NN():
 
             #02.02.01 At the Last Hidden Layer:
             cost = self.hidden_layers[-1].cost(y=self.labels, y_hat=self.hidden_layers[-1].a, m= self.m)
-            if _%1000 == 0:
+            if _%print_each == 0:
                 print(cost)
             if abs(cost - cost_prev) <= e:
                 print('Optimization has converged!')
