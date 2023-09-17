@@ -3,7 +3,6 @@
 ## Overview
 This repository contains some of the cool things I've been studying in my journey in Machine Learning.
 
-`All code developed here was written by myself`.  
 
 ## PROJECTS
 ### 01. Neural_Network
