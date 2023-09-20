@@ -13,4 +13,5 @@ Includes a jupyter notebook with training of Neural net for regression.
 Neural Network algorithm implementation from scratch for `multiclass classfication`.
 Includes a jupyter notebook with training of NN for multiclass classification.
 
-### 03.Next- comming soon.
+### 03.train_cv_test_datasets_methodology
+This quickly talks about how to split the data available for a ML project to be able to train different models, select the best among them, and estimate its general performance.
