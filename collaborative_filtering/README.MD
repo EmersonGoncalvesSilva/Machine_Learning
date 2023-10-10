@@ -11,9 +11,7 @@ Collaborative Filtering is a technique that learns about the underlining feature
 The idea is that an information $X$ can be learned about the a product, and an information $W$ and $b$ can be learned about its user preference.
 
 The preference of an $user^{(j)}$  towards a given $product^{(i)}$ is represented by the following model:
-$
-  \hat{y} =\mathbf{w}^{(j)} \cdot \mathbf{x}^{(i)} + b^{(j)}
-$
+$ \hat{y} =\mathbf{w}^{(j)} \cdot \mathbf{x}^{(i)} + b^{(j)} $
 The determination of the best values of $X$, $W$, and $b$ is given by the minimization of the cost function:
 
 $$J({\mathbf{x}^{(0)},...,\mathbf{x}^{(n_m-1)},\mathbf{w}^{(0)},b^{(0)},...,\mathbf{w}^{(n_u-1)},b^{(n_u-1)}})= \left[ \frac{1}{2}\sum_{(i,j):r(i,j)=1}(\mathbf{w}^{(j)} \cdot \mathbf{x}^{(i)} + b^{(j)} - y^{(i,j)})^2 \right]
