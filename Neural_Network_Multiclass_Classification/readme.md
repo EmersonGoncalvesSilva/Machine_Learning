@@ -67,25 +67,25 @@ How does a `Artificial Neural Network with softmax neural network work`?
 ### Perceptron
 Perceptrons are the building block of the neural network. <br>
 Given an input $x_i$ the perceptron will compute a new value $z_i$, as follows:
-$$
+```math
 z_i = w_i x_i + b
-$$
+```
 Where $w_i$ is the weight paremeter, and $b$ is the bias. 
 ### Activation Function
 The equation above is a simple linear transformation, and in order to incorporate allow the model to map non-linearity, activations functions are used in neural network.
 - General activation function:
-$$
+```math
 a_i = f(z_i)
-$$
+```
 
 - Relu activation function.
-$$
+```math
 ReLU(z_i) = max(0, z_i)
-$$
+```
 - Softmax activation function
-$$
+```math
 \text{Softmax}(z)_i = \frac{e^{z_i}}{\sum_{j=1}^{N} e^{z_j}}
-$$
+```
 
 
 
@@ -94,9 +94,9 @@ A stack of perceptrons that receive the same input and use the same activation f
 A neural net can have many layers.
 
 ### Forward Propagation
-$$
+```math
 [X_0] -> [A_1]-> [A_2] -> ... -> [Y_{hat}]
-$$
+```
 
 Forward propagation is the process of passing input data through the neural network to make predictions.
 1. Weighted Sum: Calculate the weighted sum of inputs for each neuron in a layer.
