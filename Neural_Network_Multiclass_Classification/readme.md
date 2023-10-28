@@ -24,7 +24,7 @@ This Python module provides a comprehensive implementation of a neural network f
 ## Getting Started
 
 How to create a neural network for multiclass classification:
-```
+```Python
 
 >>import neural_network_softmax
 
