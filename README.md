@@ -18,3 +18,6 @@ This quickly talks about how to split the data available for a ML project to be 
 
 ### 04.Collaborative_filtering
 Implementation of unsupervised learning model `collaborative filtering` and application to movies recommentation.
+
+### 05.Regularization
+Implementation of Neural Network model with Regularizaion and application to for binary classification.
