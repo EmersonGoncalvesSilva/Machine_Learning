@@ -14,21 +14,21 @@ J = -\frac{1}{m} \sum\limits_{i = 1}^{m} \large{(}\small  y^{(i)}\log\left(a^{[L
 ```
 To:
 
-$$
+```math
 J_{regularized} = \small \underbrace{-\frac{1}{m} \sum\limits_{i = 1}^{m} \large{(}\small y^{(i)}\log\left(a^{[L](i)}\right) + (1-y^{(i)})\log\left(1- a^{[L](i)}\right) \large{)} }_\text{cross-entropy cost} + \underbrace{\frac{1}{m} \frac{\lambda}{2} \sum\limits_l\sum\limits_k\sum\limits_j W_{k,j}^{[l]2} }_\text{L2 regularization cost} \tag{2}
-$$
+```
 
 ### Regression problem  - Cost Function:
 
-$$
+```math
 J = \frac{1}{2m} \sum_{i=1}^{m} (a^{[L](i)}- y^{(i)})^2
-$$
+```
 
 To:
 
-$$
+```math
 J_{regularized} = \small \underbrace{\frac{1}{2m} \sum_{i=1}^{m} (a^{[L](i)}- y^{(i)})^2 }_\text{cross-entropy cost} + \underbrace{\frac{1}{m} \frac{\lambda}{2} \sum\limits_l\sum\limits_k\sum\limits_j W_{k,j}^{[l]2} }_\text{L2 regularization cost} \tag{2}
-$$
+```
 
 
 
@@ -40,7 +40,7 @@ To implement the changes needed for backward propagation to take into account re
 
 Not much need to be changed in dw, but the addition to the usual dw equation, of the following element:
 
-$
+```math
 \frac{d}{dW} ( \frac{1}{2}\frac{\lambda}{m}  W^2) = \frac{\lambda}{m} W
-$
+```
     
