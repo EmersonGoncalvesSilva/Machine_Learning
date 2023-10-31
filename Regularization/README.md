@@ -27,7 +27,7 @@ J = \frac{1}{2m} \sum_{i=1}^{m} (a^{[L](i)}- y^{(i)})^2
 To:
 
 ```math
-J_{regularized} = \small \underbrace{\frac{1}{2m} \sum_{i=1}^{m} (a^{[L](i)}- y^{(i)})^2 }_\text{cross-entropy cost} + \underbrace{\frac{1}{m} \frac{\lambda}{2} \sum\limits_l\sum\limits_k\sum\limits_j W_{k,j}^{[l]2} }_\text{L2 regularization cost} \tag{2}
+J_{regularized} = \small \underbrace{\frac{1}{2m} \sum_{i=1}^{m} (a^{[L](i)}- y^{(i)})^2 }_\text{MSE} + \underbrace{\frac{1}{m} \frac{\lambda}{2} \sum\limits_l\sum\limits_k\sum\limits_j W_{k,j}^{[l]2} }_\text{L2 regularization cost} \tag{2}
 ```
 
 
