@@ -10,30 +10,30 @@ Adam then updates the parameters(w,b) by taking a direction that combines inform
 
 ### Calculate the Momentum:
 
-$$
+```math
 v_{dW^{[l]}} = \frac{\beta_1 v_{dW^{[l]}} + (1 - \beta_1) \frac{\partial \mathcal{J} }{ \partial W^{[l]} }}{1 - (\beta_1)^t} \\
 
 v_{db^{[l]}} = \frac{\beta_1 v_{db^{[l]}} + (1 - \beta_1) \frac{\partial \mathcal{J} }{ \partial b^{[l]} }}{1 - (\beta_1)^t} \\
-$$
+```
 
 
 
 ### Calculate the RMSprop:
 
-$$
+```math
 s_{dW^{[l]}} = \frac{\beta_2 s_{dW^{[l]}} + (1 - \beta_2) (\frac{\partial \mathcal{J} }{\partial W^{[l]} })^2}{1 - (\beta_2)^t} \\
 
 s_{db^{[l]}} = \frac{\beta_2 s_{db^{[l]}} + (1 - \beta_2) (\frac{\partial \mathcal{J} }{\partial b^{[l]} })^2}{1 - (\beta_2)^t} \\
-$$
+```
 
 
 
 ### Update model parameters - Adam:
-$$
+```math
 W^{[l]} = W^{[l]} - \alpha \frac{v_{dW^{[l]}}}{\sqrt{s_{dW^{[l]}}} + \varepsilon}\\
 
 b^{[l]} = b^{[l]} - \alpha \frac{v_{db^{[l]}}}{\sqrt{s_{db^{[l]}}} + \varepsilon}\\
-$$
+```
 
 $\varepsilon$ is a very  small number placed in the denominador to avoid division by 0.
 
@@ -42,4 +42,6 @@ $\varepsilon$ is a very  small number placed in the denominador to avoid divisio
 In the initial stages of training, the model can make bigger updates on w, and b, but relying on a constant learning rate (alpha) can eventually lead the model to become trapped in wide oscillations that prevent it from converging effectively. However, by gradually decreasing the learning rate alpha as training progresses, the optimization process can adopt smaller, more deliberate steps that guide the model closer to the minimum. This concept is the fundamental principle behind learning rate decay.
 
 Adaptative alpha:
-$$\alpha = \frac{1}{1 + decayRate \times epochNumber} \alpha_{0}$$
+```math
+\alpha = \frac{1}{1 + decayRate \times epochNumber} \alpha_{0}
+```
