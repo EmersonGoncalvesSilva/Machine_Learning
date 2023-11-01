@@ -20,4 +20,8 @@ This quickly talks about how to split the data available for a ML project to be 
 Implementation of unsupervised learning model `collaborative filtering` and application to movies recommentation.
 
 ### 05.Regularization
-Implementation of Neural Network model with Regularizaion and application to for binary classification.
+Implementation of Neural Network model with Regularizaion and application for binary classification.
+
+### 06.Mini-Batch Gradient Descent
+When training a model in a large dataset, using mini-batches of data can speed up training.  
+
