@@ -12,7 +12,8 @@ Adam then updates the parameters(w,b) by taking a direction that combines inform
 
 ```math
 v_{dW^{[l]}} = \frac{\beta_1 v_{dW^{[l]}} + (1 - \beta_1) \frac{\partial \mathcal{J} }{ \partial W^{[l]} }}{1 - (\beta_1)^t} \\
-
+```
+```math
 v_{db^{[l]}} = \frac{\beta_1 v_{db^{[l]}} + (1 - \beta_1) \frac{\partial \mathcal{J} }{ \partial b^{[l]} }}{1 - (\beta_1)^t} \\
 ```
 
@@ -22,7 +23,8 @@ v_{db^{[l]}} = \frac{\beta_1 v_{db^{[l]}} + (1 - \beta_1) \frac{\partial \mathca
 
 ```math
 s_{dW^{[l]}} = \frac{\beta_2 s_{dW^{[l]}} + (1 - \beta_2) (\frac{\partial \mathcal{J} }{\partial W^{[l]} })^2}{1 - (\beta_2)^t} \\
-
+```
+```math
 s_{db^{[l]}} = \frac{\beta_2 s_{db^{[l]}} + (1 - \beta_2) (\frac{\partial \mathcal{J} }{\partial b^{[l]} })^2}{1 - (\beta_2)^t} \\
 ```
 
@@ -31,7 +33,8 @@ s_{db^{[l]}} = \frac{\beta_2 s_{db^{[l]}} + (1 - \beta_2) (\frac{\partial \mathc
 ### Update model parameters - Adam:
 ```math
 W^{[l]} = W^{[l]} - \alpha \frac{v_{dW^{[l]}}}{\sqrt{s_{dW^{[l]}}} + \varepsilon}\\
-
+```
+```math
 b^{[l]} = b^{[l]} - \alpha \frac{v_{db^{[l]}}}{\sqrt{s_{db^{[l]}}} + \varepsilon}\\
 ```
 
