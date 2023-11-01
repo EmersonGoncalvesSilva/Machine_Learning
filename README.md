@@ -25,3 +25,5 @@ Implementation of Neural Network model with Regularizaion and application for bi
 ### 06.Mini-Batch Gradient Descent
 When training a model in a large dataset, using mini-batches of data can speed up training.  
 
+### 07.Adam Algorithm and Learning Rate Decay
+Apply Adam to make the NN learn faster from the data. Apply Leraning Rate Decay to make the model converge effectivelly by decreasing the size of learning rate as the training progresses. 
