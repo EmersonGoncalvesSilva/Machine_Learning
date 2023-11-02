@@ -3,8 +3,8 @@
 ## Adam Algorithm
 Adam stands as one of the most efficient optimization algorithms for training neural networks. It uses concepts from RMSProp, and Momentum. 
 Here's a breakdown of how Adam operates:
-- 1- It computes an exponentially weighted average of past gradients and preserves this information in the variables 𝑣 (before bias correction) and 𝑣𝑐𝑜𝑟𝑟𝑒𝑐𝑡𝑒𝑑 (with bias correction).
-- 2- It calculates an exponentially weighted average of the squared magnitudes of past gradients, which it stores in variables 𝑠 (before bias correction) and 𝑠𝑐𝑜𝑟𝑟𝑒𝑐𝑡𝑒𝑑 (with bias correction).
+- 1- It computes an exponentially weighted average of past gradients and preserves this information in the variables 𝑣.
+- 2- It calculates an exponentially weighted average of the squared magnitudes of past gradients, which it stores in variables 𝑠.
 
 Adam then updates the parameters(w,b) by taking a direction that combines information from steps "1" and "2".
 
